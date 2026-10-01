@@ -1,5 +1,6 @@
 // Renders the profile README images from the HTML in this folder.
-// Pulls the live plugin registry first so the counts and icons stay current.
+// The Craft Plugin Store decides what is released; the justinholt.com registry
+// supplies icons, colours and site links, plus the plugins not on the store yet.
 import { createServer } from 'node:http';
 import { readFile, writeFile } from 'node:fs/promises';
 import { extname, join } from 'node:path';
@@ -9,8 +10,28 @@ const here = new URL('.', import.meta.url).pathname;
 const pages = ['banner', 'plugins'];
 const types = { '.html': 'text/html', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.woff2': 'font/woff2' };
 
-const res = await fetch('https://justinholt.com/plugins.json');
-await writeFile(join(here, 'plugins.json'), await res.text());
+const registry = (await (await fetch('https://justinholt.com/plugins.json')).json()).plugins;
+
+const store = [];
+for (let next = 'https://api.craftcms.com/v1/plugin-store/plugins?developerId=1564060&perPage=96'; next; ) {
+  const page = await (await fetch(next)).json();
+  store.push(...page.plugins);
+  next = page.nextPage;
+}
+
+// Erpy's per-ERP connectors are add-ons to Erpy, not plugins in their own right.
+const onStore = store.filter(s => !s.handle.startsWith('erpy-'));
+const released = new Set(onStore.map(s => s.handle));
+const merged = [
+  ...registry
+    .filter(p => p.listed || released.has(p.craftHandle))
+    .map(p => ({ ...p, status: released.has(p.craftHandle) ? 'released' : 'in-development' })),
+  ...onStore
+    .filter(s => !registry.some(p => p.craftHandle === s.handle))
+    .map(s => ({ name: s.name, tagline: s.shortDescription, url: `https://plugins.craftcms.com/${s.handle}`, icon: s.iconUrl, status: 'released' })),
+].sort((a, b) => a.name.localeCompare(b.name));
+
+await writeFile(join(here, 'plugins.json'), JSON.stringify({ plugins: merged }, null, 2));
 
 const server = createServer(async (req, reply) => {
   try {
@@ -51,10 +72,9 @@ server.close();
 const { plugins } = JSON.parse(await readFile(join(here, 'plugins.json'), 'utf8'));
 const row = p => `| ${p.icon ? `<img src="${p.icon}" width="24" alt="">` : ''} | [${p.name}](${p.url}) | ${p.tagline} |`;
 const table = (title, list) => [`**${title}**`, '', '| | Plugin | |', '| --- | --- | --- |', ...list.map(row), ''].join('\n');
-const listed = plugins.filter(p => p.listed);
 const block = [
-  table('Released', listed.filter(p => p.status === 'released')),
-  table('In development', listed.filter(p => p.status !== 'released')),
+  table('On the Plugin Store', plugins.filter(p => p.status === 'released')),
+  table('In development', plugins.filter(p => p.status !== 'released')),
 ].join('\n');
 
 const readme = join(here, '../README.md');

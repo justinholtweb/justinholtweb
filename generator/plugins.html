@@ -31,17 +31,18 @@
   <div class="canvas">
     <header>
       <h2 class="display"><span class="rainbow" data-total></span> Craft CMS plugins <small>Commerce integrations, editorial tools, SEO, security and the odd strange idea.</small></h2>
-      <div class="legend"><span class="live">Released</span><span class="dev">In development</span></div>
+      <div class="legend"><span class="live">On the Plugin Store</span><span class="dev">In development</span></div>
     </header>
     <div class="grid"></div>
   </div>
 <script>
   fetch('plugins.json').then(r => r.json()).then(d => {
-    const listed = d.plugins.filter(p => p.listed);
+    const listed = d.plugins;
     document.querySelector('[data-total]').textContent = listed.length;
     document.querySelector('.grid').innerHTML = listed.map(p => {
-      const icon = p.icon
-        ? `<img src="icons/${p.icon.split('/').pop()}" alt="">`
+      const src = p.icon?.startsWith('https://justinholt.com/') ? `icons/${p.icon.split('/').pop()}` : p.icon;
+      const icon = src
+        ? `<img src="${src}" alt="">`
         : `<i style="background:${p.color || '#252540'}">${p.name[0]}</i>`;
       return `<div class="p ${p.status === 'released' ? '' : 'dev'}">${icon}<span>${p.name.replace(' Reminder', '')}</span></div>`;
     }).join('');

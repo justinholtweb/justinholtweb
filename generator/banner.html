@@ -35,7 +35,7 @@
   </div>
 <script>
   fetch('plugins.json').then(r => r.json()).then(d => {
-    document.querySelector('[data-count=listed]').textContent = d.plugins.filter(p => p.listed).length;
+    document.querySelector('[data-count=listed]').textContent = d.plugins.length;
     document.body.dataset.ready = '1';
   });
 </script>
