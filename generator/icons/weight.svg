@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#c08a15"/>
+  <!-- The glyph's own box is x 17.1–82.9, y 14–90 — centred on (50, 52), not (50, 50).
+       This transform recentres it and insets it to 0.94: a solid mass carries more optical
+       weight than Abacus's thin frame, so matching that icon's 14% padding geometrically
+       makes this one look like it is bursting out of the tile. -->
+  <g transform="translate(3 1.12) scale(0.94)" fill="#FEFEFE" fill-rule="evenodd">
+    <!-- Handle -->
+    <path d="M50 14c-10.5 0-19 8.5-19 19v9h11v-9a8 8 0 0 1 16 0v9h11v-9c0-10.5-8.5-19-19-19Z"/>
+    <!-- Body. The belt is knocked out rather than shaded, so the tile shows through it —
+         a second fill would stop this being a monochrome glyph. -->
+    <path d="M30.5 42h39a7 7 0 0 1 6.9 5.8l6.4 34A7 7 0 0 1 76 90H24a7 7 0 0 1-6.9-8.2l6.4-34A7 7 0 0 1 30.5 42ZM27 60h46l1.5 8h-49L27 60Z"/>
+  </g>
+</svg>

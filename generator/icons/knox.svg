@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Knox">
+    <!-- A vault door: Fortnox is a fort, and what Knox does is put the takings safely inside it. -->
+    <rect width="100" height="100" rx="22" fill="#0B4F3F"/>
+    <!-- Door plate, inset from the frame, with the hinges on its left edge. -->
+    <rect x="13" y="13" width="74" height="74" rx="10" fill="#F2F5F3"/>
+    <circle cx="50" cy="50" r="29" fill="#0B4F3F"/>
+    <!-- Brass handwheel: rim, hub and four spokes that stop at the rim rather than crossing it,
+         which is the difference between a wheel and a crosshair. -->
+    <g stroke="#C79A3C" stroke-linecap="round">
+        <circle cx="50" cy="50" r="19" fill="none" stroke-width="5"/>
+        <g stroke-width="5.5">
+            <path d="M39.6 39.6 60.4 60.4"/>
+            <path d="M60.4 39.6 39.6 60.4"/>
+        </g>
+    </g>
+    <circle cx="50" cy="50" r="7.5" fill="#0B4F3F"/>
+    <circle cx="50" cy="50" r="4" fill="#C79A3C"/>
+    <!-- Hinges on the frame. -->
+    <g fill="#8FB5A8">
+        <rect x="15" y="27" width="6" height="13" rx="2"/>
+        <rect x="15" y="60" width="6" height="13" rx="2"/>
+    </g>
+</svg>

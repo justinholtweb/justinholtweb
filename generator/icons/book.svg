@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plugin Store icon. Rounded tile in the plugin's accent, mark in #FEFEFE — the shape the rest of
+  the family uses, so a row of these in the Plugin Store reads as one shelf.
+
+  The mark is an open book seen front-on: two page blocks whose top and bottom edges fall away
+  from the fold, so the pair reads as a shallow peak rather than as two panels side by side.
+
+  Each page is a rounded rect under a skewY(), not a rotate(). A rotation about anything on the
+  fold line scissors the two pages into each other at one end — the spine gap opens at the top and
+  closes to an overlap at the bottom. A skew leaves every vertical line vertical, so the gap
+  between x=47 and x=53 is exactly 6 units from top to bottom and survives to 32px, where it is
+  the only thing saying "book" rather than "document".
+
+  y is pre-compensated for the skew: skewY shifts by x·tan(a) measured from the origin, not from
+  the shape, so the y that lands the edge where it belongs is not the y you want to see.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Book">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#3E5C50"/>
+
+  <!-- Left page: outer edge at x=13, fold edge at x=47, top falling from 25.3 to 34 -->
+  <rect x="13" y="37.34" width="34" height="41" rx="5" fill="#FEFEFE" transform="skewY(-14.42)"/>
+
+  <!-- Right page: the mirror -->
+  <rect x="53" y="11.63" width="34" height="41" rx="5" fill="#FEFEFE" transform="skewY(14.42)"/>
+</svg>

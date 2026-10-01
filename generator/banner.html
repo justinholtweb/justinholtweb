@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .canvas { width: 1280px; height: 420px; padding: 48px 56px; }
+  .logo { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 20px; }
+  .logo img { width: 44px; height: 44px; }
+  .pill { display: flex; width: fit-content; margin-top: 34px; }
+  h1 { width: fit-content; font-size: 112px; margin-top: 14px; letter-spacing: 1px; }
+  .lede { margin-top: 14px; max-width: 640px; font-size: 21px; line-height: 1.5; color: rgba(240, 240, 245, 0.75); }
+  .stats { position: absolute; right: 400px; bottom: 48px; display: flex; gap: 36px; }
+  .stat b { display: block; font-family: 'Jersey 20'; font-weight: 400; font-size: 46px; line-height: 1; color: var(--pink); }
+  .stat span { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(240, 240, 245, 0.55); }
+  .photo {
+    position: absolute; right: 30px; bottom: -40px; height: 520px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%), linear-gradient(to right, transparent 0%, #000 25%);
+    -webkit-mask-composite: source-in;
+    opacity: 0.92;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <img class="photo" src="profile.webp" alt="">
+    <div class="logo"><img src="logo.svg" alt="">justinholt.com</div>
+    <div class="pill">Official Craft CMS Verified Partner</div>
+    <h1 class="display rainbow">Justin Holt</h1>
+    <p class="lede">Craft CMS developer in Charlotte, NC. Custom plugins, headless APIs, full-stack builds and AI-powered workflows.</p>
+    <div class="stats">
+      <div class="stat"><b>27+</b><span>years</span></div>
+      <div class="stat"><b data-count="listed">93</b><span>plugins</span></div>
+    </div>
+  </div>
+<script>
+  fetch('plugins.json').then(r => r.json()).then(d => {
+    document.querySelector('[data-count=listed]').textContent = d.plugins.filter(p => p.listed).length;
+    document.body.dataset.ready = '1';
+  });
+</script>
+</body>
+</html>

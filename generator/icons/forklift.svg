@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plugin Store icon. Rounded tile in the plugin's accent, mark in #FEFEFE: the shape the rest of
+  the family uses, so a row of these in the Plugin Store reads as one shelf.
+
+  The mark is a counterbalance forklift, facing left, with a load on its forks. The accent is
+  hi-vis lime taken down to #7FA016, the lightest lime that still holds a white mark at 3:1 and
+  reads at 6.3:1 as text on the marketing pages. Speculatr's #4D7C0F is its nearest neighbour.
+
+  With everything in one colour the tyres would melt into the counterweight, so the body has a
+  wheel arch cut two units wider than each tyre, and the hubs are punched out with evenodd so the
+  tile shows through. The load sits two units clear of the mast for the same reason.
+
+  The drawing spans x 10-92, y 14-86. The transform insets it to 0.9, about the width of Abacus's
+  frame, and centres it.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Forklift">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#7FA016"/>
+
+  <g transform="translate(4.1 5) scale(0.9)" fill="#FEFEFE">
+    <!-- Overhead guard, mast, carriage and forks -->
+    <path d="M46 20h30a4 4 0 0 1 4 4v3H50v-3a4 4 0 0 0-4-4zM50 24h4v22h-4zM76 24h4v20h-4zM34 14h6v62h-6zM43 14h5v62h-5zM34 40h16v6H34zM34 66h4v14h-4zM10 74h28v6H10z"/>
+
+    <!-- Counterweight body, with both wheel arches cut out of its underside -->
+    <path d="M52 46h32a6 6 0 0 1 6 6v18A10 10 0 0 0 78 70H72.39A12 12 0 0 0 52 69.37z"/>
+
+    <!-- The pallet and its load -->
+    <rect x="12" y="66" width="22" height="5" rx="1"/>
+    <rect x="14" y="44" width="18" height="20" rx="2"/>
+
+    <!-- Tyres, hubs punched out -->
+    <path fill-rule="evenodd" d="M52 76a10 10 0 1 0 20 0a10 10 0 1 0-20 0zM58 76a4 4 0 1 0 8 0a4 4 0 1 0-8 0z"/>
+    <path fill-rule="evenodd" d="M76 78a8 8 0 1 0 16 0a8 8 0 1 0-16 0zM81 78a3 3 0 1 0 6 0a3 3 0 1 0-6 0z"/>
+  </g>
+</svg>

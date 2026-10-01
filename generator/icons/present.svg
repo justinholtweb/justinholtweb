@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#D0344A"/>
+  <g fill="#FEFEFE">
+    <!-- Bow: each loop is one evenodd path, so the hole survives into the mask unchanged -->
+    <path fill-rule="evenodd" d="M50 35C43 20 22 14 22 25c0 8 13 10 28 10zM45 31.5C40 24 28 20.5 28 25.5c0 4 8 6 17 6z"/>
+    <path fill-rule="evenodd" d="M50 35C57 20 78 14 78 25c0 8-13 10-28 10zM55 31.5C60 24 72 20.5 72 25.5c0 4-8 6-17 6z"/>
+    <rect x="44.5" y="28" width="11" height="9" rx="2.5"/>
+    <!-- Lid and body are separate shapes, split by the ribbon: a bundle is several things
+         arriving as one -->
+    <path d="M18 39h27v13H15v-10a3 3 0 0 1 3-3zM55 39h27a3 3 0 0 1 3 3v10H55z"/>
+    <path d="M20 56h25v29H23a3 3 0 0 1-3-3zM55 56h25v26a3 3 0 0 1-3 3H55z"/>
+  </g>
+</svg>

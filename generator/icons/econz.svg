@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Econz">
+  <!-- Invoice sheet -->
+  <path fill="#0B7A46" d="M12 4h26.6L52 17.4V56a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z"/>
+  <!-- Folded corner -->
+  <path fill="#0A5F37" d="M38.6 4 52 17.4H42.6a4 4 0 0 1-4-4V4z"/>
+  <!-- Ledger rules -->
+  <g fill="#FFFFFF">
+    <rect x="19" y="24" width="17" height="3" rx="1.5"/>
+    <rect x="19" y="32" width="23" height="3" rx="1.5"/>
+    <rect x="19" y="40" width="12" height="3" rx="1.5"/>
+  </g>
+  <!-- Booked tick -->
+  <circle cx="45" cy="46" r="12" fill="#43C67F"/>
+  <path fill="none" stroke="#0B7A46" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"
+        d="m39.6 46.2 3.8 3.8 7-8"/>
+</svg>

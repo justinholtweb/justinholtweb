@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Zo">
+  <!-- Rounded tile: 22.44% radius, matching the rest of the plugin family -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#1F5F8B"/>
+  <!-- A ledger: solid page, with the spine, the Z and one ruled line knocked out of it.
+       Holes rather than strokes, so icon-mask.svg is this path alone. -->
+  <path fill="#FEFEFE" fill-rule="evenodd" d="M16 19a7 7 0 0 1 7-7h54a7 7 0 0 1 7 7v62a7 7 0 0 1-7 7H23a7 7 0 0 1-7-7ZM26 21h4v58h-4ZM39 28h33v8L51 56h21v8H39v-8l21-20H39Z M39 70h25v5.5H39Z"/>
+</svg>

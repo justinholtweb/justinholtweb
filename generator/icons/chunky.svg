@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plugin Store icon. Rounded tile in the plugin's accent, mark in #FEFEFE — the shape the rest of
+  the family uses, so a row of these in the Plugin Store reads as one shelf.
+
+  The mark is an upload arrow whose shaft has been cut into three separated slabs: one thing going
+  up, arriving in pieces. The arrowhead and the slabs are separate elements rather than one path,
+  because the whole point of the mark is the gaps between them, and a single path with a
+  fill-rule would be one shape trying to look like four.
+
+  The slabs are deliberately the same width as each other and narrower than the head. Tapering them
+  reads as a signal-strength meter; keeping them square reads as a file in equal parts, which is
+  what this is.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Chunky">
+  <rect width="100" height="100" rx="22.44" fill="#7A2E5B"/>
+  <g fill="#FEFEFE">
+    <path d="M52.12,15.88 L75.54,39.3 A3,3 0 0 1 73.42,44.42 H26.58 A3,3 0 0 1 24.46,39.3 L47.88,15.88 A3,3 0 0 1 52.12,15.88 Z"/>
+    <rect x="36" y="50" width="28" height="9" rx="4.5"/>
+    <rect x="36" y="64" width="28" height="9" rx="4.5"/>
+    <rect x="36" y="78" width="28" height="9" rx="4.5"/>
+  </g>
+</svg>

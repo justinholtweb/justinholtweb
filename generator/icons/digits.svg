@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#17935A"/>
+  <!-- A key whose blade ends in a download arrow. The bow and teeth say entitlement, the head says
+       delivery; a bare arrow is every download button and a bare key is every login screen. -->
+  <g fill="#FEFEFE">
+    <!-- Bow: one evenodd ring, so the mask can copy it unchanged -->
+    <path fill-rule="evenodd" d="M50 13a17 17 0 1 1 0 34 17 17 0 0 1 0-34Zm0 9.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Z"/>
+    <!-- Blade -->
+    <rect x="44" y="44" width="12" height="20"/>
+    <!-- Teeth -->
+    <rect x="33" y="48" width="12" height="7" rx="2"/>
+    <rect x="36" y="57" width="9" height="6" rx="2"/>
+    <!-- Arrowhead -->
+    <path d="M29.5 62h41a3.5 3.5 0 0 1 2.7 5.7L52.7 88.3a3.5 3.5 0 0 1-5.4 0L26.8 67.7a3.5 3.5 0 0 1 2.7-5.7Z"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Lexies">
+    <rect width="100" height="100" rx="22" fill="#123C6B"/>
+    <!-- the invoice, torn along the bottom the way a Rechnung comes off the pad -->
+    <path d="M22 16h44a4 4 0 0 1 4 4v58l-6-5-6 5-6-5-6 5-6-5-6 5-6-5-6 5V20a4 4 0 0 1 4-4z" fill="#FFFFFF"/>
+    <g fill="#9DB6D2">
+        <rect x="30" y="28" width="28" height="5" rx="2.5"/>
+        <rect x="30" y="39" width="20" height="4" rx="2"/>
+        <rect x="30" y="48" width="24" height="4" rx="2"/>
+    </g>
+    <!-- paid, in euro -->
+    <circle cx="70" cy="68" r="20" fill="#12A150"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round">
+        <path d="M78 60a10.5 10.5 0 1 0 0 16"/>
+        <path d="M59 65h13"/>
+        <path d="M59 71h13"/>
+    </g>
+</svg>

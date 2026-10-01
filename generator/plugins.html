@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .canvas { width: 1280px; padding: 48px 56px 52px; }
+  header { display: flex; align-items: end; justify-content: space-between; margin-bottom: 36px; }
+  h2 { font-size: 64px; }
+  h2 small { display: block; font-family: 'Inter'; font-size: 17px; line-height: 1.6; color: rgba(240, 240, 245, 0.6); margin-top: 6px; }
+  .legend { display: flex; gap: 22px; font-size: 14px; color: rgba(240, 240, 245, 0.65); }
+  .legend span::before { content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
+  .legend .live::before { background: #3ddc84; }
+  .legend .dev::before { background: var(--pink); }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px 8px; }
+  .p { position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .p img, .p i {
+    width: 54px; height: 54px; border-radius: 12px; display: grid; place-items: center;
+    font-style: normal; font-family: 'Jersey 20'; font-size: 32px; color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+  .p span { font-size: 12px; text-align: center; line-height: 1.25; color: rgba(240, 240, 245, 0.8); max-width: 92px; }
+  .p::after {
+    content: ''; position: absolute; top: -3px; left: calc(50% + 21px);
+    width: 11px; height: 11px; border-radius: 50%; border: 2px solid #15122a; background: #3ddc84;
+  }
+  .p.dev::after { background: var(--pink); }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <header>
+      <h2 class="display"><span class="rainbow" data-total></span> Craft CMS plugins <small>Commerce integrations, editorial tools, SEO, security and the odd strange idea.</small></h2>
+      <div class="legend"><span class="live">Released</span><span class="dev">In development</span></div>
+    </header>
+    <div class="grid"></div>
+  </div>
+<script>
+  fetch('plugins.json').then(r => r.json()).then(d => {
+    const listed = d.plugins.filter(p => p.listed);
+    document.querySelector('[data-total]').textContent = listed.length;
+    document.querySelector('.grid').innerHTML = listed.map(p => {
+      const icon = p.icon
+        ? `<img src="icons/${p.icon.split('/').pop()}" alt="">`
+        : `<i style="background:${p.color || '#252540'}">${p.name[0]}</i>`;
+      return `<div class="p ${p.status === 'released' ? '' : 'dev'}">${icon}<span>${p.name.replace(' Reminder', '')}</span></div>`;
+    }).join('');
+    Promise.all([...document.images].map(i => i.decode().catch(() => {}))).then(() => document.body.dataset.ready = '1');
+  });
+</script>
+</body>
+</html>

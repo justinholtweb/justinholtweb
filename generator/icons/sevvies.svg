@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded tile: 22.44% radius, matching the rest of the plugin family -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#F85B45"/>
+  <!-- An invoice with its corner folded, ruled and checked. The two rules and the
+       tick are holes rather than drawn marks, so icon-mask.svg is this path alone. -->
+  <path fill="#FEFEFE" fill-rule="evenodd" d="M22 12H58L78 32V90H22ZM32 30H62V36H32ZM32 42H54V48H32ZM30 70L44 84L70 58L64 52L44 72L36 64Z"/>
+</svg>

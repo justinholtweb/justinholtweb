@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#6D28D9"/>
+  <!-- Two coins, one stacked behind the other: points arrive in lots, and each lot is its own
+       coin. The star is punched through the front one, so it reads as a reward rather than a
+       rating, and it is a hole in one evenodd path so the mask can copy it unchanged. -->
+  <g fill="#FEFEFE">
+    <!-- Back coin: the crescent of it the front coin leaves visible, with a clear gap -->
+    <path d="M37.53 26.59A26 26 0 1 1 73.41 62.47A30.5 30.5 0 0 0 37.53 26.59Z"/>
+    <!-- Front coin: a disc with the star punched out of it -->
+    <path fill-rule="evenodd" d="M43.5 30.5A26 26 0 1 1 43.5 82.5A26 26 0 1 1 43.5 30.5ZM43.5 40.2L47.97 51.55L60.14 52.29L50.73 60.05L53.79 71.86L43.5 65.3L33.21 71.86L36.27 60.05L26.86 52.29L39.03 51.55Z"/>
+  </g>
+</svg>

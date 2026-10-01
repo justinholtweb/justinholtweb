@@ -1,0 +1,45 @@
+@font-face { font-family: 'Inter'; font-weight: 400 700; src: url(fonts/inter-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Jersey 20'; font-weight: 400; src: url(fonts/jersey-20-latin.woff2) format('woff2'); }
+
+:root {
+  --charcoal: #0f0f1a;
+  --charcoal-light: #1a1a2e;
+  --charcoal-lighter: #252540;
+  --pink: #e84393;
+  --off-white: #f0f0f5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: transparent; }
+body { font-family: 'Inter', sans-serif; color: var(--off-white); -webkit-font-smoothing: antialiased; }
+
+/* Same layered gradient as the site's hero band */
+.canvas {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background-image:
+    radial-gradient(ellipse at 85% 15%, rgba(139, 92, 246, 0.25) 0%, transparent 40%),
+    radial-gradient(ellipse at 65% 5%, rgba(232, 67, 147, 0.2) 0%, transparent 35%),
+    radial-gradient(ellipse at 15% 85%, rgba(59, 130, 246, 0.22) 0%, transparent 40%),
+    radial-gradient(ellipse at 35% 95%, rgba(0, 255, 100, 0.08) 0%, transparent 35%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 165, 0, 0.06) 0%, transparent 40%),
+    linear-gradient(135deg, #0f0f1a 0%, #1a0a2e 30%, #0a1a2e 60%, #0f0f1a 100%);
+}
+
+.display { font-family: 'Jersey 20', sans-serif; font-weight: 400; line-height: 0.95; }
+
+.rainbow {
+  background-image: linear-gradient(90deg, #ff0000, #ffa500, #ffff00, #00ff00, #00a0ff, #8b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 16px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 14px; color: rgba(240, 240, 245, 0.85);
+}
+.pill::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--pink); }

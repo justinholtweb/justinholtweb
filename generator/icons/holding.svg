@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Holding">
+    <rect width="100" height="100" rx="22" fill="#0E7C86"/>
+
+    <!-- the invoice -->
+    <path d="M26 18 h30 l12 12 v50 a4 4 0 0 1 -4 4 h-38 a4 4 0 0 1 -4 -4 V22 a4 4 0 0 1 4 -4 z" fill="#FFFFFF"/>
+    <path d="M56 18 l12 12 h-8 a4 4 0 0 1 -4 -4 z" fill="#9FD7DC"/>
+
+    <!-- what the invoice is denominated in -->
+    <path d="M56 46.5 A 11.5 11.5 0 1 0 56 62.5" fill="none" stroke="#0E7C86" stroke-width="4" stroke-linecap="round"/>
+    <path d="M33 51 h19" stroke="#0E7C86" stroke-width="4" stroke-linecap="round"/>
+    <path d="M33 58 h17" stroke="#0E7C86" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- and the fact that it got there by itself -->
+    <circle cx="74" cy="72" r="15" fill="#0E7C86"/>
+    <circle cx="74" cy="72" r="15" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M67.5 76.5 A 8 8 0 1 1 74 80" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M63.5 71 l4 5.5 l6 -2" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

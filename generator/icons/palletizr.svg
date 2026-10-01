@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plugin Store icon. Rounded tile in the plugin's accent, mark in #FEFEFE — the shape the rest of
+  the family uses, so a row of these in the Plugin Store reads as one shelf.
+
+  The mark is the plugin's whole argument in one picture: two cases side by side, a third bridging
+  them, and a pallet underneath carrying all three as one handling unit. The bridge is the point —
+  a top case sitting squarely on one of the two below would read as a stack of boxes, which is what
+  the carrier is being asked *not* to price.
+
+  Everything is white on the tile rather than two-tone. At 32px a second colour turns the whole
+  mark to mud, and the gaps between the cases do the separating instead.
+
+  The pallet is two boards and three blocks, not a slab. A single bar under the load reads as a
+  shelf or a floor; it is the three legs with daylight between them that make it a pallet.
+
+  The accent is warehouse safety orange rather than the freight navy this started as. Navy looked
+  right on the tile and was unusable everywhere else: the marketing pages are dark, the plugin
+  accent is body text on them, and #1E3A5F scored 1.65:1 against the page background where the rest
+  of the family sits between 2.8 and 7.0. One colour has to serve as both a tile behind white marks
+  and as readable text on near black, and that rules out anything this dark.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Palletizr">
+  <!-- Rounded tile: 22.44% radius, matching the rest of the family -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#D4541E"/>
+
+  <g fill="#FEFEFE">
+    <!-- The case bridging the two below it -->
+    <rect x="34" y="14" width="32" height="20" rx="2.5"/>
+
+    <!-- The two it is bridging -->
+    <rect x="16" y="38" width="32" height="20" rx="2.5"/>
+    <rect x="52" y="38" width="32" height="20" rx="2.5"/>
+
+    <!-- Top deck -->
+    <rect x="12" y="62" width="76" height="7" rx="2"/>
+
+    <!-- Blocks -->
+    <rect x="16" y="69" width="12" height="8"/>
+    <rect x="44" y="69" width="12" height="8"/>
+    <rect x="72" y="69" width="12" height="8"/>
+
+    <!-- Bottom deck -->
+    <rect x="12" y="77" width="76" height="7" rx="2"/>
+  </g>
+</svg>

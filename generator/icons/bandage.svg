@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plugin Store icon. Rounded tile in the plugin's accent, mark in #FEFEFE — the shape the rest of
+  the family uses, so a row of these in the Plugin Store reads as one shelf.
+
+  The mark is an adhesive bandage on the diagonal: rounded strip, a pad punched out of the middle,
+  six perforations punched back into the pad. Pad and perforations are the tile showing through
+  rather than a second ink, so the whole mark is one white mass and cannot turn to mud at 32px.
+  The perforations are a third crossing of the same path, which is why fill-rule is evenodd.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Bandage">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#B5453C"/>
+
+  <!-- Diagonal, because a plaster laid flat and square reads as a sticking-plaster-shaped box. -->
+  <g transform="rotate(-45 50 50)">
+    <path fill="#FEFEFE" fill-rule="evenodd" d="
+      M21,35 H79 A15,15 0 0 1 79,65 H21 A15,15 0 0 1 21,35 Z
+      M34.5,39.5 H65.5 A2,2 0 0 1 67.5,41.5 V58.5 A2,2 0 0 1 65.5,60.5 H34.5 A2,2 0 0 1 32.5,58.5 V41.5 A2,2 0 0 1 34.5,39.5 Z
+      M44.2,45 A2.2,2.2 0 1 1 39.8,45 A2.2,2.2 0 1 1 44.2,45 Z
+      M52.2,45 A2.2,2.2 0 1 1 47.8,45 A2.2,2.2 0 1 1 52.2,45 Z
+      M60.2,45 A2.2,2.2 0 1 1 55.8,45 A2.2,2.2 0 1 1 60.2,45 Z
+      M44.2,55 A2.2,2.2 0 1 1 39.8,55 A2.2,2.2 0 1 1 44.2,55 Z
+      M52.2,55 A2.2,2.2 0 1 1 47.8,55 A2.2,2.2 0 1 1 52.2,55 Z
+      M60.2,55 A2.2,2.2 0 1 1 55.8,55 A2.2,2.2 0 1 1 60.2,55 Z
+    "/>
+  </g>
+</svg>

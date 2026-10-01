@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Plugin Store icon. Rounded tile in the plugin's accent, mark in #FEFEFE — the shape the rest of
+  the family uses, so a row of these in the Plugin Store reads as one shelf.
+
+  The mark is a photograph with a drop sitting in its corner: the plugin's whole job in one glyph.
+  The frame is a single evenodd path (outer rounded rect minus inner) so it stays one white mass,
+  and the drop is drawn twice — oversized in the tile colour, then white on top — cutting an even
+  moat through the horizon behind it. Without the moat the drop welds to the hills at 32px and the
+  mark reads as a blob.
+
+  The drop sits *inside* the frame on purpose. Hung off the outside corner it has to cut through
+  the frame's bar, which leaves a nicked sliver above the cut at small sizes — and inside is what
+  the plugin actually does anyway.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Waterfall">
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#2E7D9A"/>
+
+  <!-- Frame -->
+  <path fill="#FEFEFE" fill-rule="evenodd" d="
+    M24,22 H76 A10,10 0 0 1 86,32 V68 A10,10 0 0 1 76,78 H24 A10,10 0 0 1 14,68 V32 A10,10 0 0 1 24,22 Z
+    M25,30 A3,3 0 0 0 22,33 V67 A3,3 0 0 0 25,70 H75 A3,3 0 0 0 78,67 V33 A3,3 0 0 0 75,30 Z
+  "/>
+
+  <!-- Horizon -->
+  <path fill="#FEFEFE" d="M22,70 L36,48 L46,60 L56,44 L74,70 Z"/>
+
+  <!-- The moat, then the drop -->
+  <path fill="#2E7D9A" d="M64,33.0 C75.2,44.2 76.5,52.4 76.5,58 A12.5,12.5 0 1 1 51.5,58 C51.5,52.4 52.8,44.2 64,33.0 Z"/>
+  <path fill="#FEFEFE" d="M64,38.2 C72.1,48.1 73.0,54.0 73.0,58 A9,9 0 1 1 55.0,58 C55.0,54.0 55.9,48.1 64,38.2 Z"/>
+</svg>

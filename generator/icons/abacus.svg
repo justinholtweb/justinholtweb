@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded tile: 22.44% radius, matching Appleseed's rx="35" on a 156px square -->
+  <rect x="0" y="0" width="100" height="100" rx="22.44" fill="#2b8a6f"/>
+  <g fill="#FEFEFE">
+    <!-- Frame -->
+    <path d="M14 10h6v80h-6zM80 10h6v80h-6zM14 10h72v6H14zM14 84h72v6H14z"/>
+    <!-- Rods -->
+    <rect x="20" y="27" width="60" height="3"/>
+    <rect x="20" y="43" width="60" height="3"/>
+    <rect x="20" y="59" width="60" height="3"/>
+    <!-- Beads: each rod counts to a different place, which is the whole point of the thing -->
+    <circle cx="28" cy="28.5" r="7"/>
+    <circle cx="43" cy="28.5" r="7"/>
+    <circle cx="72" cy="28.5" r="7"/>
+    <circle cx="28" cy="44.5" r="7"/>
+    <circle cx="57" cy="44.5" r="7"/>
+    <circle cx="72" cy="44.5" r="7"/>
+    <circle cx="28" cy="60.5" r="7"/>
+    <circle cx="43" cy="60.5" r="7"/>
+    <circle cx="58" cy="60.5" r="7"/>
+  </g>
+</svg>
